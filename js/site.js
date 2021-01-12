@@ -21,6 +21,7 @@ function clearword2(){
 }
 
 function checkfizzbuzz2(){
+  document.getElementById("result2").textContent = '';
   let begin_number = document.getElementById("begin_number").value,
       end_number = document.getElementById("end_number").value;
    
