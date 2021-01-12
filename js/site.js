@@ -35,8 +35,6 @@ function checkfizzbuzz2(){
         }else {
           document.getElementById("result2").innerHTML+= (i + "! ")
         }
-        
-        
       }
 }
 function advance1(){
