@@ -24,6 +24,8 @@
   <!-- Template Main CSS File -->
   <link href="css/style.css" rel="stylesheet">
   <link href="css/sweetalert2.css" rel="stylesheet">
+  <link href="css/prism.css" rel="stylesheet">
+
 </head>
 
 <body id="page-top">
@@ -124,6 +126,8 @@
                   <a target="_blank" href="https://github.com/arthastheking113/fizzbuzz_web" >
                     <button type="button" class="button button-a button-round" >Github Repository</button>
                   </a>
+                  <button type="button" class="button button-a button-round" data-toggle="modal" data-target="#exampleModal">Javascript Algorithm</button>
+
                 </div>
               </div> 
             </div>
@@ -204,7 +208,65 @@
     </div>
   </div>
 </section><!-- End Fizzbuzz Section -->
+<!--popup button modal-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content modal-xl">
+      <div class="modal-body text-center">
+        <pre>
+          <code class="language-js">
+function checkfizzbuzz1(){
+  let single_number = document.getElementById("single_number").value;
+  if (single_number % 5 == 0 && single_number % 3 == 0 ){
+    document.getElementById("single_number_result").placeholder = "FizzBuzz!";
+  } else if (single_number % 3 == 0){
+    document.getElementById("single_number_result").placeholder = "Fizz!";
+  }else if (single_number % 5 == 0 ){
+    document.getElementById("single_number_result").placeholder = "Buzz!";
+  }else {
+    document.getElementById("single_number_result").placeholder = single_number + "!";
+  }
+}
+function clearword1(){
+  document.getElementById("single_number_result").placeholder = "Result";
+  document.getElementById("single_number").value = '';
+}
+function clearword2(){
+  document.getElementById("begin_number").value = "";
+  document.getElementById("end_number").value = '';
+  document.getElementById("result2").textContent = '';
+}
 
+function checkfizzbuzz2(){
+  document.getElementById("result2").textContent = '';
+  let begin_number = document.getElementById("begin_number").value,
+      end_number = document.getElementById("end_number").value;
+      for( i = begin_number; i <= end_number; i++){
+        if (i % 5 == 0 && i % 3 == 0 ){
+          document.getElementById("result2").innerHTML += "FizzBuzz! "
+        } else if (i % 3 == 0){
+          document.getElementById("result2").innerHTML += "Fizz! "
+        }else if (i % 5 == 0 ){
+          document.getElementById("result2").innerHTML += "Buzz! "
+        }else {
+          document.getElementById("result2").innerHTML+= (i + "! ")
+        }     
+      }
+}
+          </code>
+        </pre>
+      </div>
+      <div class="modal-footer text-center">
+        <div class="col">
+          <a target="_blank" href="https://github.com/arthastheking113/sumofallfear_web">
+            <button type="button" class="button button-a btn-sm button-rouded text-center">Go To Github Repository</button>
+          </a>
+          <button type="button" class="button button-a btn-sm button-rouded" style="background-color: rgb(158, 160, 160);" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
   <!-- ======= Footer ======= -->
   <footer>
     <div class="container">
@@ -242,6 +304,7 @@
   <script src="js/sweetalert2.all.min.js"></script>
   <!-- Optional: include a polyfill for ES6 Promises for IE11 -->
   <script src="js/sweetalert2.min.js"></script>
+  <script src="js/prism.js"></script>
 
 </body>
 
