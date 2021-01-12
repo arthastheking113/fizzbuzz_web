@@ -39,3 +39,23 @@ function checkfizzbuzz2(){
         
       }
 }
+function advance1(){
+  clearword1();
+  let random_number = Math.floor(Math.random() * 99999);
+  document.getElementById("single_number").value = random_number;
+  checkfizzbuzz1();
+}
+function advance2(){
+  clearword2();
+  let random_number1 = Math.floor(Math.random() * 99),
+      random_number2 = Math.floor(Math.random() * 9999);
+  while (random_number2 < random_number1){
+    random_number2 = Math.floor(Math.random() * 9999);
+    if (random_number2 > random_number1){
+      break
+    }
+  }
+  document.getElementById("begin_number").value = random_number1;
+  document.getElementById("end_number").value = random_number2;
+  checkfizzbuzz2();
+}
