@@ -38,7 +38,7 @@ function checkfizzbuzz2(){
         }
       }
     } else {
-      document.getElementById("result2").innerHTML = "You Need To Enter A Begin Number Smaller Than End Number!!!"
+      document.getElementById("result2").innerHTML = "You Need To Enter A 'Begin Number' Smaller Than 'End Number' OR You Just Need To Click 'The Advance Lazy Button' !!!"
     }
 }
 function advance1(){
