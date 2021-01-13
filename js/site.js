@@ -22,8 +22,9 @@ function clearword2(){
 
 function checkfizzbuzz2(){
   document.getElementById("result2").textContent = '';
-  let begin_number = document.getElementById("begin_number").value,
-      end_number = document.getElementById("end_number").value;
+  let begin_number = parseInt(document.getElementById("begin_number").value),
+      end_number = parseInt(document.getElementById("end_number").value);
+  if (begin_number < end_number ){
    
       for( i = begin_number; i <= end_number; i++){
         if (i % 5 == 0 && i % 3 == 0 ){
@@ -36,6 +37,9 @@ function checkfizzbuzz2(){
           document.getElementById("result2").innerHTML+= (i + "! ")
         }
       }
+    } else {
+      document.getElementById("result2").innerHTML = "You Need To Enter A Begin Number Smaller Than End Number!!!"
+    }
 }
 function advance1(){
   clearword1();
