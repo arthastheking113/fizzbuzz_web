@@ -114,13 +114,16 @@
                 </p>
                 <p class="lead">
                   Players take turns to count incrementally, replacing any number divisible by three with the word 
-                  "fizz", and any number divisible by five with the word "buzz".
+                  "Fizz!", and any number divisible by five with the word "Buzz!", and any number is both divisible by five and three with the word "FizzBuzz!!".
                 </p>
                 <p class="lead">
                   Technologies Used: HTML, JavaScript, CSS, Bootstrap.
                 </p>
                 <p class="lead">
-                  <b>Example:</b> the user enters "200" the output is "FizzFizz". Because 200 can divide to 5 twice</p>
+                  <b>Example:</b> the user enters "210" the output is "FizzFizz!!". Because 200 can divide to 5 and 3.
+                </p>
+                  <p class="lead">
+                    OR you can simply press the <b>"Advance Button"</b> if you are too <b>lazy like me</b> to enter number.                  </p>
                 <br>
                 <div class="text-center">
                   <a target="_blank" href="https://github.com/arthastheking113/fizzbuzz_web" >
@@ -246,8 +249,9 @@ function clearword2(){
 
 function checkfizzbuzz2(){
   document.getElementById("result2").textContent = '';
-  let begin_number = document.getElementById("begin_number").value,
-      end_number = document.getElementById("end_number").value;
+  let begin_number = parseInt(document.getElementById("begin_number").value),
+      end_number = parseInt(document.getElementById("end_number").value);
+  if (begin_number < end_number ){
     
       for( i = begin_number; i <= end_number; i++){
         if (i % 5 == 0 && i % 3 == 0 ){
@@ -258,8 +262,11 @@ function checkfizzbuzz2(){
           document.getElementById("result2").innerHTML += "Buzz! "
         }else {
           document.getElementById("result2").innerHTML+= (i + "! ")
-        } 
+        }
       }
+    } else {
+      document.getElementById("result2").innerHTML = "You Need To Enter A 'Begin Number' Smaller Than 'End Number' OR You Just Need To Click 'The Advance Lazy Button' !!!"
+    }
 }
 function advance1(){
   clearword1();
